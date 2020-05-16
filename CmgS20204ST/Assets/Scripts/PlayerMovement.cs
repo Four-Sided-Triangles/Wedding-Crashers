@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -65,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
         if (collider.tag == "FinishLine")
         {
             UnityEngine.Debug.Log("Finish!");
-            rb.AddForce(0, 6400f, 0);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }

@@ -19,27 +19,27 @@ public class MainMenu : MonoBehaviour
         source.PlayOneShot(clickSound);
     }
 
-    public void PlayGame()
+    public void playGame()
     {
-        StartCoroutine(DelaySceneLoad());
+        StartCoroutine(delaySceneLoad());
     }
 
-    public IEnumerator DelaySceneLoad()
+    public IEnumerator delaySceneLoad()
     {
         yield return new WaitForSeconds(clickSound.length - 0.25f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    public IEnumerator DelayQuit()
+    public IEnumerator delayQuit()
     {
         yield return new WaitForSeconds(clickSound.length - 0.25f);
         Application.Quit();
     }
 
-    public void QuitGame()
+    public void quitGame()
     {
         Debug.Log("DOBBY IS FREEEEEEE!!!");
-        DelayQuit();
+        StartCoroutine(delayQuit());
     }
 
 }
