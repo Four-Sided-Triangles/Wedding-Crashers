@@ -41,17 +41,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void setSpeed()
     {
-        if (Input.GetKey("i"))
+        if (Input.GetKey("w") && forwardSpeed < 4000f)
         {
-            forwardSpeed = 500f;
+            forwardSpeed += 500f;
         }
-        else if (Input.GetKey("o"))
+        else if (Input.GetKey("s") && forwardSpeed > 0)
         {
-            forwardSpeed = 1000f;
-        }
-        else if (Input.GetKey("p"))
-        {
-            forwardSpeed = 1500f;
+            forwardSpeed -= 500f;
         }
     }
 }
