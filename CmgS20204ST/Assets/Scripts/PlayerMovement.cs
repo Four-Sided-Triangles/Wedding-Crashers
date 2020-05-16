@@ -21,8 +21,6 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-
-
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -51,18 +49,15 @@ public class PlayerMovement : MonoBehaviour
 
     private void setSpeed()
     {
-        if (Input.GetKeyDown("w") && forwardSpeed < 4000f) // go faster
+        if (Input.GetKey("w") && forwardSpeed < 4000f) // go faster
         {
-            forwardSpeed += 500f;
+            forwardSpeed += 100f;
         }
-        else if (Input.GetKey("s") && forwardSpeed >= 1000f) // go slower
+        else if (Input.GetKey("s") && forwardSpeed > -1000f ) // go slower
         {
-            forwardSpeed -= 1000f;
+            forwardSpeed -= 100f;
         }
-        else if (Input.GetKeyDown("s") && Input.GetKey("y") && forwardSpeed <= 0 && forwardSpeed >= -1000f)
-        {
-            forwardSpeed -= 500f;
-        }
+
     }
 
     private void OnTriggerEnter(Collider collider)
