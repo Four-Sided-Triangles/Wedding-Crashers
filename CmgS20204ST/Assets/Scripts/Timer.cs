@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
     public float timer = 120f;
     private GameObject player;
+    public Text timerText;
     
 
     // Start is called before the first frame update
@@ -17,7 +19,17 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        string minutes = ((int)timer / 60).ToString();
+        string seconds = ((int)timer % 60).ToString("f2");
+
+        if (minutes.Equals("0"))
+        {
+            timerText.text = "Time left: " + seconds;
+        }
+        else 
+        {
+            timerText.text = "Time left: " + minutes.ToString() + ":" + seconds;
+        }
     }
 
     void decrement()
@@ -25,7 +37,13 @@ public class Timer : MonoBehaviour
         if (timer == 0)
         {
             Debug.Log("Game Over!");
+            timerText.text = "Game Over!";
+            Application.LoadLevel("HomePage");
+        }
 
+        if(timer == 21 || timer <= 21)
+        {
+            timerText.color = Color.red;
         }
         timer--;
     }
