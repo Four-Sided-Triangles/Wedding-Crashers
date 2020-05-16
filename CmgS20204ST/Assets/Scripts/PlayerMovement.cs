@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Diagnostics;
+using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -17,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         setSpeed();
-        Debug.Log(forwardSpeed);
+        UnityEngine.Debug.Log(forwardSpeed);
         rb.AddForce(0, 0, Time.deltaTime * forwardSpeed);
         playerMovement();
     }
@@ -47,6 +49,15 @@ public class PlayerMovement : MonoBehaviour
         else if (Input.GetKeyDown("s") && Input.GetKey("y") && forwardSpeed <= 0 && forwardSpeed >= -1000f)
         {
             forwardSpeed -= 500f;
+        }
+    }
+
+    private void OnTriggerEnter(Collider collider)
+    {
+        if (collider.tag == "FinishLine")
+        {
+            UnityEngine.Debug.Log("Finish!");
+            rb.AddForce(0, 6400f, 0);
         }
     }
 }
