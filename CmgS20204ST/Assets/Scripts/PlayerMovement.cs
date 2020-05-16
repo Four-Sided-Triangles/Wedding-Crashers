@@ -7,33 +7,28 @@ public class PlayerMovement : MonoBehaviour
     private float forwardSpeed = 1000f;
     private float lateralSpeed = 2000f;
 
-    private void setRb()
-    {
-        rb = GetComponent<Rigidbody>();
-        rb.drag = 0.5f;
-    }
-
     // Start is called before the first frame update
     void Start()
     {
-        setRb();
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        setSpeed();
+        Debug.Log(forwardSpeed);
         rb.AddForce(0, 0, Time.deltaTime * forwardSpeed);
         playerMovement();
-        setSpeed();
     }
 
     private void playerMovement()
     {
-        if (Input.GetKey("a"))
+        if (Input.GetKey("a") && forwardSpeed != 0)
         {
             rb.AddForce(Time.deltaTime * -lateralSpeed, 0, 0);
         }
-        if (Input.GetKey("d"))
+        if (Input.GetKey("d") && forwardSpeed != 0)
         {
             rb.AddForce(Time.deltaTime * lateralSpeed, 0, 0);
         }
@@ -41,11 +36,15 @@ public class PlayerMovement : MonoBehaviour
 
     private void setSpeed()
     {
-        if (Input.GetKey("w") && forwardSpeed < 4000f)
+        if (Input.GetKeyDown("w") && forwardSpeed < 4000f) // go faster
         {
             forwardSpeed += 500f;
         }
-        else if (Input.GetKey("s") && forwardSpeed > 0)
+        else if (Input.GetKey("s") && forwardSpeed >= 1000f) // go slower
+        {
+            forwardSpeed -= 1000f;
+        }
+        else if (Input.GetKeyDown("s") && Input.GetKey("y") && forwardSpeed <= 0 && forwardSpeed >= -1000f)
         {
             forwardSpeed -= 500f;
         }
