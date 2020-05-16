@@ -407,6 +407,66 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9027122928305207889, guid: 24b8e61212f23e8499c3f9dab7ed0132,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9027122928305207889, guid: 24b8e61212f23e8499c3f9dab7ed0132,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.97848594
+      objectReference: {fileID: 0}
+    - target: {fileID: 9027122928305207889, guid: 24b8e61212f23e8499c3f9dab7ed0132,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.9198113
+      objectReference: {fileID: 0}
+    - target: {fileID: 9027122928305207889, guid: 24b8e61212f23e8499c3f9dab7ed0132,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9027122928305207889, guid: 24b8e61212f23e8499c3f9dab7ed0132,
+        type: 3}
+      propertyPath: m_ShadowAngle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9027122928305207889, guid: 24b8e61212f23e8499c3f9dab7ed0132,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9027122928305207889, guid: 24b8e61212f23e8499c3f9dab7ed0132,
+        type: 3}
+      propertyPath: m_Shadows.m_Bias
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9027122928305207889, guid: 24b8e61212f23e8499c3f9dab7ed0132,
+        type: 3}
+      propertyPath: m_Shadows.m_NormalBias
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9027122928305207889, guid: 24b8e61212f23e8499c3f9dab7ed0132,
+        type: 3}
+      propertyPath: m_Shadows.m_NearPlane
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9027122928305207889, guid: 24b8e61212f23e8499c3f9dab7ed0132,
+        type: 3}
+      propertyPath: m_DrawHalo
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9027122928305207889, guid: 24b8e61212f23e8499c3f9dab7ed0132,
+        type: 3}
+      propertyPath: m_CookieSize
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9027122928305207889, guid: 24b8e61212f23e8499c3f9dab7ed0132,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9027122928305207890, guid: 24b8e61212f23e8499c3f9dab7ed0132,
         type: 3}
       propertyPath: m_Name
