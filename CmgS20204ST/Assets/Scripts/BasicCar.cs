@@ -6,6 +6,7 @@ public class BasicCar : MonoBehaviour
 {
 
     private Rigidbody rb;
+    private GameObject npcCar;
     private float forwardSpeed = 1000f;
     private float lateralSpeed = 2000f;
 
@@ -20,7 +21,16 @@ public class BasicCar : MonoBehaviour
     {
         setSpeed();
         UnityEngine.Debug.Log(forwardSpeed);
-        rb.AddForce(0, 0, Time.deltaTime * forwardSpeed);
+        if(gameObject.transform.rotation.eulerAngles.z == 0)
+        {
+            rb.AddForce(0, 0, Time.deltaTime * forwardSpeed);
+        }
+
+        if(gameObject.transform.rotation.eulerAngles.z == 180)
+        {
+            rb.AddForce(0, 0, Time.deltaTime * forwardSpeed);
+
+        }
         playerMovement();
     }
 
