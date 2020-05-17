@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public float push;
     private Rigidbody rb;
     public float rotateSpeed = 100.0f;
+    private Quaternion originalRotation;
 
     public AudioSource source;
     public AudioClip lampCollision;
@@ -21,11 +22,13 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        originalRotation = gameObject.transform.rotation;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        Reorientate();
         setSpeed();
         if (currentSpeed <= maxForwardSpeed && currentSpeed >= maxBackwardSpeed)
         {
@@ -39,6 +42,21 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = rb.velocity.normalized * 50;
         }
         playerMovement();
+    }
+
+    private void Reorientate()
+    {
+        Vector3 pos = gameObject.transform.position;
+        Quaternion rot = gameObject.transform.rotation;
+        if (pos.x > 5f || pos.x < -10f
+            || pos.y > 10f || pos.y < -4f)
+        {
+            rb.velocity = new Vector3(0,0,0);
+            rb.angularVelocity = new Vector3(0, 0, 0);
+            gameObject.transform.rotation = originalRotation;
+            gameObject.transform.position =
+                new Vector3(2f, 2f, pos.z - 20f);
+        }
     }
 
     private void playerMovement()
