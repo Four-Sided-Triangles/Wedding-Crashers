@@ -47,13 +47,6 @@ public class BasicCar : MonoBehaviour
         }
     }
 
-    private void Update()
-    {   
-        if (isHit == false)
-        {
-            transform.localRotation = Quaternion.Euler(-90f, 0f, 0f);
-        }
-    }
     void FixedUpdate()
     {
         //if (isHit == false)

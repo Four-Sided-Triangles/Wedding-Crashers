@@ -653,6 +653,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LeftLane10sec (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8160184153545952100, guid: b5342abaa41e58a41b307fe62d669dd9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Front
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5342abaa41e58a41b307fe62d669dd9, type: 3}
 --- !u!1001 &105248191
@@ -1744,6 +1749,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LeftLaneChurchSpawner (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8160184153545952100, guid: b5342abaa41e58a41b307fe62d669dd9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Reverse
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5342abaa41e58a41b307fe62d669dd9, type: 3}
 --- !u!1001 &316195262
@@ -2002,6 +2012,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RightLaneChurchSpawner (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8160184153545952100, guid: b5342abaa41e58a41b307fe62d669dd9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Reverse
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5342abaa41e58a41b307fe62d669dd9, type: 3}
@@ -2901,6 +2916,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RightLane10sec (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8160184153545952100, guid: b5342abaa41e58a41b307fe62d669dd9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Front
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5342abaa41e58a41b307fe62d669dd9, type: 3}
 --- !u!4 &475842392 stripped
@@ -3329,6 +3349,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LeftLaneChurchSpawner (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8160184153545952100, guid: b5342abaa41e58a41b307fe62d669dd9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Reverse
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5342abaa41e58a41b307fe62d669dd9, type: 3}
@@ -3764,6 +3789,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RightLaneChurchSpawner (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8160184153545952100, guid: b5342abaa41e58a41b307fe62d669dd9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Reverse
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5342abaa41e58a41b307fe62d669dd9, type: 3}
@@ -4694,6 +4724,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LeftLane10sec (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8160184153545952100, guid: b5342abaa41e58a41b307fe62d669dd9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Front
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5342abaa41e58a41b307fe62d669dd9, type: 3}
 --- !u!4 &723616140 stripped
@@ -4980,7 +5015,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 747316167}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.74, y: 0, z: -33.08}
+  m_LocalPosition: {x: 1.74, y: 1.5, z: -33.08}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2083747608}
@@ -5460,6 +5495,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LeftLane10sec (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8160184153545952100, guid: b5342abaa41e58a41b307fe62d669dd9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Front
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5342abaa41e58a41b307fe62d669dd9, type: 3}
@@ -6441,6 +6481,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RightLane10sec (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8160184153545952100, guid: b5342abaa41e58a41b307fe62d669dd9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Front
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5342abaa41e58a41b307fe62d669dd9, type: 3}
 --- !u!4 &1049651940 stripped
@@ -7369,6 +7414,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RightLane10sec (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8160184153545952100, guid: b5342abaa41e58a41b307fe62d669dd9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Front
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5342abaa41e58a41b307fe62d669dd9, type: 3}
 --- !u!1001 &1125470818
@@ -7708,6 +7758,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LeftLane10sec (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8160184153545952100, guid: b5342abaa41e58a41b307fe62d669dd9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Front
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5342abaa41e58a41b307fe62d669dd9, type: 3}
 --- !u!1001 &1203177539
@@ -7776,6 +7831,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LeftLaneOriginSpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 8160184153545952100, guid: b5342abaa41e58a41b307fe62d669dd9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Front
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5342abaa41e58a41b307fe62d669dd9, type: 3}
@@ -7945,6 +8005,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RightLane10sec
+      objectReference: {fileID: 0}
+    - target: {fileID: 8160184153545952100, guid: b5342abaa41e58a41b307fe62d669dd9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Front
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5342abaa41e58a41b307fe62d669dd9, type: 3}
@@ -8207,6 +8272,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LeftLaneChurchSpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 8160184153545952100, guid: b5342abaa41e58a41b307fe62d669dd9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Reverse
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5342abaa41e58a41b307fe62d669dd9, type: 3}
 --- !u!1001 &1237297433
@@ -8377,6 +8447,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RightLane10sec (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8160184153545952100, guid: b5342abaa41e58a41b307fe62d669dd9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Front
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5342abaa41e58a41b307fe62d669dd9, type: 3}
@@ -8725,6 +8800,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RightLaneOriginSpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 8160184153545952100, guid: b5342abaa41e58a41b307fe62d669dd9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Front
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5342abaa41e58a41b307fe62d669dd9, type: 3}
@@ -9622,6 +9702,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LeftLaneChurchSpawner (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8160184153545952100, guid: b5342abaa41e58a41b307fe62d669dd9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Reverse
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5342abaa41e58a41b307fe62d669dd9, type: 3}
 --- !u!1001 &1408091957
@@ -9700,6 +9785,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RightLaneChurchSpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 8160184153545952100, guid: b5342abaa41e58a41b307fe62d669dd9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Reverse
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5342abaa41e58a41b307fe62d669dd9, type: 3}
@@ -11128,6 +11218,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LeftLaneChurchSpawner (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8160184153545952100, guid: b5342abaa41e58a41b307fe62d669dd9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Reverse
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5342abaa41e58a41b307fe62d669dd9, type: 3}
@@ -12606,6 +12701,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RightLaneChurchSpawner (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8160184153545952100, guid: b5342abaa41e58a41b307fe62d669dd9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Reverse
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5342abaa41e58a41b307fe62d669dd9, type: 3}
 --- !u!4 &1858576095 stripped
@@ -12774,6 +12874,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RightLaneChurchSpawner (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8160184153545952100, guid: b5342abaa41e58a41b307fe62d669dd9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Reverse
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5342abaa41e58a41b307fe62d669dd9, type: 3}
@@ -13194,6 +13299,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LeftLaneChurchSpawner (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8160184153545952100, guid: b5342abaa41e58a41b307fe62d669dd9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Reverse
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5342abaa41e58a41b307fe62d669dd9, type: 3}
 --- !u!1001 &1907577249
@@ -13432,6 +13542,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LeftLane10sec
+      objectReference: {fileID: 0}
+    - target: {fileID: 8160184153545952100, guid: b5342abaa41e58a41b307fe62d669dd9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Front
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5342abaa41e58a41b307fe62d669dd9, type: 3}
@@ -14960,6 +15075,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RightLaneChurchSpawner (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8160184153545952100, guid: b5342abaa41e58a41b307fe62d669dd9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Reverse
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5342abaa41e58a41b307fe62d669dd9, type: 3}
