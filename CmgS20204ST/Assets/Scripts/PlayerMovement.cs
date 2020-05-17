@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
+    public float maxForwardSpeed;
+    public float maxBackwardSpeed;
+    public float currentSpeed;
     private Rigidbody rb;
     private float forwardSpeed = 0f;
     private float lateralSpeed = 4000f;
@@ -27,7 +29,8 @@ public class PlayerMovement : MonoBehaviour
     {
         setSpeed();
         UnityEngine.Debug.Log(forwardSpeed);
-        rb.AddForce(0, 0, Time.deltaTime * forwardSpeed);
+        if (currentSpeed < maxBackwardSpeed && currentSpeed > maxBackwardSpeed)
+            rb.AddRelativeForce(-transform.up * Time.deltaTime * currentSpeed);
         playerMovement();
     }
 
@@ -50,13 +53,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void setSpeed()
     {
-        if (Input.GetKey("w") && forwardSpeed < 1200f) // go faster
+        if (Input.GetKey("w") && currentSpeed < 1200f) // go faster
         {
-            forwardSpeed += 110f;
+            currentSpeed += 10f;
         }
-        else if (Input.GetKey("s") && forwardSpeed > -1000f ) // go slower
+        else if (Input.GetKey("s") && currentSpeed > -1000f ) // go slower
         {
-            forwardSpeed -= 100f;
+            currentSpeed -= 100f;
         }
 
     }
