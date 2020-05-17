@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/HomePage.unity
     guid: 81800739dddfd0e408d8189e24ef1dc6
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 31d6437c6c508724d9058bc6d1652eec
+    path: Assets/Scenes/Main.unity
+    guid: 7ebe1f635a27aa6468e5d106066f2217
   - enabled: 1
     path: Assets/Scenes/WinningScene.unity
     guid: a8b5e9bc02263d147ac6f74f61a3fe4f
