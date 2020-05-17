@@ -1882,7 +1882,7 @@ MonoBehaviour:
     topRight: {r: 1, g: 1, b: 1, a: 1}
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 11400000, guid: a7c61a4439556974f9a232fd6d60f909,
+  m_fontColorGradientPreset: {fileID: 11400000, guid: 954ef252ad5b26f449fc920e1fa2bbbc,
     type: 2}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
