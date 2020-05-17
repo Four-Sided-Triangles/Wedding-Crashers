@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
-    public float timer = 120f;
+    public float timer = 60f;
     private GameObject player;
     public TMPro.TextMeshProUGUI timerText;
     
@@ -20,17 +20,7 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        string minutes = ((int)timer / 60).ToString("00");
-        string seconds = ((int)timer % 60).ToString("00");
-
-        if (minutes.Equals("0"))
-        {
-            timerText.text = "Time left: " + seconds;
-        }
-        else 
-        {
-            timerText.text = "Time left: " + minutes.ToString() + ":" + seconds;
-        }
+        timerText.text = "Time left: " + timer;
     }
 
     void decrement()
