@@ -648,7 +648,7 @@ GameObject:
   - component: {fileID: -1194059874096792437}
   m_Layer: 0
   m_Name: family_car
-  m_TagString: BasicCar
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -747,6 +747,7 @@ MonoBehaviour:
   forwardSpeed: 30000
   maxSpeed: 30
   isHit: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!54 &159905263455633940
 Rigidbody:
   m_ObjectHideFlags: 0
