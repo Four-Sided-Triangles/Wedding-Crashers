@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -49,7 +50,8 @@ public class PlayerMovement : MonoBehaviour
         Vector3 pos = gameObject.transform.position;
         Quaternion rot = gameObject.transform.rotation;
         if (pos.x > 5f || pos.x < -10f
-            || pos.y > 10f || pos.y < -4f)
+            || pos.y > 10f || pos.y < -4f
+            || Input.GetKeyDown(KeyCode.Space))
         {
             rb.velocity = new Vector3(0,0,0);
             rb.angularVelocity = new Vector3(0, 0, 0);
