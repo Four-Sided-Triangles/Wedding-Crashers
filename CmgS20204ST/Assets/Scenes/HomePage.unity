@@ -3366,12 +3366,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Vroom Vroom                            W
+  m_text: 'Vroom Vroom                           W
 
-    Slow Down n''  Reverse             
+    Slow Down n''  Reverse            
     S
 
-    Turn                                      A and D'
+    Turn                                     A and D
+
+    Messed Up?                    
+    SPACEBAR'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0b7d0af5b9c44be4798ffe23358b92a7, type: 2}
   m_sharedMaterial: {fileID: -2261175661034052614, guid: 0b7d0af5b9c44be4798ffe23358b92a7,
