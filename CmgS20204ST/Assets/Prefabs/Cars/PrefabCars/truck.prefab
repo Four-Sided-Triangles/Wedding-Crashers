@@ -885,7 +885,7 @@ GameObject:
   - component: {fileID: -8967398122330379604}
   m_Layer: 0
   m_Name: truck
-  m_TagString: Untagged
+  m_TagString: BasicCar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -979,7 +979,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6767d1e3aaa73142ade6948148f9f58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forwardSpeed: 800
+  forwardSpeed: 30000
+  maxSpeed: 0
+  isHit: 0
 --- !u!64 &4386164819861881022
 MeshCollider:
   m_ObjectHideFlags: 0

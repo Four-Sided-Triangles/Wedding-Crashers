@@ -8,15 +8,9 @@ public class PlayerMovement : MonoBehaviour
     public float maxForwardSpeed;
     public float maxBackwardSpeed;
     public float currentSpeed;
+    public float push;
     private Rigidbody rb;
-    private float forwardSpeed = 0f;
-    private float lateralSpeed = 4000f;
-    private float rotateSpeed = 25.1f;
-    private float driftSpeed = 80f;
-    private float minAngle = -75f;
-    private float maxAngle = 75f;
-    private float xRotation = 0f;
-    private float zRotation = 0f;
+    public float rotateSpeed = 100.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -28,38 +22,42 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         setSpeed();
-        UnityEngine.Debug.Log(forwardSpeed);
-        if (currentSpeed < maxBackwardSpeed && currentSpeed > maxBackwardSpeed)
-            rb.AddRelativeForce(-transform.up * Time.deltaTime * currentSpeed);
+        if (currentSpeed <= maxForwardSpeed && currentSpeed >= maxBackwardSpeed)
+        {
+            rb.AddForce(transform.forward * currentSpeed * 1000);
+            //rb.MovePosition(transform.position + transform.forward * Time.fixedDeltaTime * currentSpeed);
+        }
+
+        if (rb.velocity.magnitude > maxForwardSpeed)
+        {
+            rb.velocity = rb.velocity.normalized * maxForwardSpeed;
+            rb.velocity = rb.velocity.normalized * 50;
+        }
         playerMovement();
     }
 
     private void playerMovement()
     {
-        if (Input.GetKey("a") && forwardSpeed != 0)
+        if (Input.GetKey("a") && currentSpeed != 0)
         {
-            rb.AddForce(Time.deltaTime * -lateralSpeed, 0, 0);
-            transform.Rotate(new Vector3(0, 0, 1.0f) * -rotateSpeed * Time.deltaTime);
-            rb.AddForce(0, 0, Time.deltaTime * driftSpeed);
+            transform.Rotate(new Vector3(0, 1, 0) * -rotateSpeed * currentSpeed/50 * Time.deltaTime);
         }
-        if (Input.GetKey("d") && forwardSpeed != 0)
+        if (Input.GetKey("d") && currentSpeed != 0)
         {
-            rb.AddForce(Time.deltaTime * lateralSpeed, 0, 0);
-            transform.Rotate(new Vector3(0, 0, 1.0f) * rotateSpeed * Time.deltaTime);
-            rb.AddForce(0, 0, Time.deltaTime * driftSpeed);
+            transform.Rotate(new Vector3(0, 1, 0) * rotateSpeed * currentSpeed/50 * Time.deltaTime);
         }
 
     }
 
     private void setSpeed()
     {
-        if (Input.GetKey("w") && currentSpeed < 1200f) // go faster
+        if (Input.GetKey("w") && currentSpeed < maxForwardSpeed) // go faster
         {
-            currentSpeed += 10f;
+            currentSpeed += push;
         }
-        else if (Input.GetKey("s") && currentSpeed > -1000f ) // go slower
+        else if (Input.GetKey("s") && currentSpeed > maxBackwardSpeed) // go slower
         {
-            currentSpeed -= 100f;
+            currentSpeed -= push;
         }
 
     }

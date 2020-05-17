@@ -7,6 +7,8 @@ public class BasicCar : MonoBehaviour
 
     private Rigidbody rb;
     public float forwardSpeed;
+    public float maxSpeed;
+    public bool isHit = false;
 
     // Start is called before the first frame update
     void Start()
@@ -15,19 +17,19 @@ public class BasicCar : MonoBehaviour
     }
 
     // Update is called once per frame
+
+    private void Update()
+    {
+        if (isHit == false)
+        {
+            transform.localRotation = Quaternion.Euler(-90f, 0f, 0f);
+        }
+    }
     void FixedUpdate()
     {
+        //if (isHit == false)
+        //    rb.MovePosition(transform.position + -transform.up * Time.fixedDeltaTime * forwardSpeed);
         setSpeed();
-        UnityEngine.Debug.Log(forwardSpeed);
-        if(gameObject.transform.rotation.eulerAngles.z == 0)
-        {
-            rb.AddForce(-transform.up * Time.deltaTime * forwardSpeed);
-        }
-
-        if(gameObject.transform.rotation.eulerAngles.z == 180)
-        {
-            rb.AddForce(transform.up * Time.deltaTime * -forwardSpeed);
-        }
         playerMovement();
     }
 
@@ -38,14 +40,20 @@ public class BasicCar : MonoBehaviour
 
     private void setSpeed()
     {
-
+        if (rb.velocity.magnitude > maxSpeed)
+            rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
+        if (isHit == false)
+        {
+            rb.AddForce(-transform.up * forwardSpeed);
+        }
+            
     }
 
-    private void OnTriggerEnter(Collider collider)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (collider.tag == "Player")
+        if (collision.gameObject.CompareTag("BasicCar"))
         {
-            Destroy(gameObject);
+            isHit = true;
         }
     }
 }
