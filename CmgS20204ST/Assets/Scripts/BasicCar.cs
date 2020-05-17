@@ -6,9 +6,7 @@ public class BasicCar : MonoBehaviour
 {
 
     private Rigidbody rb;
-    private GameObject npcCar;
-    private float forwardSpeed = 1000f;
-    private float lateralSpeed = 2000f;
+    public float forwardSpeed;
 
     // Start is called before the first frame update
     void Start()
@@ -23,13 +21,12 @@ public class BasicCar : MonoBehaviour
         UnityEngine.Debug.Log(forwardSpeed);
         if(gameObject.transform.rotation.eulerAngles.z == 0)
         {
-            rb.AddForce(0, 0, Time.deltaTime * forwardSpeed);
+            rb.AddForce(-transform.up * Time.deltaTime * forwardSpeed);
         }
 
         if(gameObject.transform.rotation.eulerAngles.z == 180)
         {
-            rb.AddForce(0, 0, Time.deltaTime * forwardSpeed);
-
+            rb.AddForce(transform.up * Time.deltaTime * -forwardSpeed);
         }
         playerMovement();
     }
