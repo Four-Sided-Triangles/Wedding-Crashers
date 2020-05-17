@@ -25,11 +25,13 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         originalRotation = gameObject.transform.rotation;
     }
-
+    private void Update()
+    {
+        Reorientate();
+    }
     // Update is called once per frame
     void FixedUpdate()
     {
-        Reorientate();
         setSpeed();
         if (currentSpeed <= maxForwardSpeed && currentSpeed >= maxBackwardSpeed)
         {
