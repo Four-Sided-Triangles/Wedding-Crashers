@@ -36,27 +36,14 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey("a") && forwardSpeed != 0)
         {
             rb.AddForce(Time.deltaTime * -lateralSpeed, 0, 0);
-            transform.Rotate(new Vector3(1.5f, 1.5f, 1.5f) * -rotateSpeed * Time.deltaTime);
+            transform.Rotate(new Vector3(0, 0, 1.0f) * -rotateSpeed * Time.deltaTime);
             rb.AddForce(0, 0, Time.deltaTime * driftSpeed);
         }
         if (Input.GetKey("d") && forwardSpeed != 0)
         {
             rb.AddForce(Time.deltaTime * lateralSpeed, 0, 0);
-            transform.Rotate(new Vector3(1.5f, 1.5f, 1.5f) * rotateSpeed * Time.deltaTime);
+            transform.Rotate(new Vector3(0, 0, 1.0f) * rotateSpeed * Time.deltaTime);
             rb.AddForce(0, 0, Time.deltaTime * driftSpeed);
-        }
-
-        if (Input.GetKey("q") && (xRotation >= minAngle && xRotation <= maxAngle) && (zRotation >= minAngle && zRotation <= maxAngle))
-        {
-            xRotation -= 5f;
-            zRotation -= 5f;
-            transform.Rotate(new Vector3(xRotation, 1.5f, zRotation) * Time.deltaTime);
-        }
-        if (Input.GetKey("e") && (xRotation >= minAngle && xRotation <= maxAngle) && (zRotation >= minAngle && zRotation <= maxAngle))
-        {
-            xRotation += 5f;
-            zRotation += 5f;
-            transform.Rotate(new Vector3(xRotation, 1.5f, zRotation) * Time.deltaTime);
         }
 
     }
