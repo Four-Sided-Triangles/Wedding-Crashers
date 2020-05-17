@@ -9,6 +9,8 @@ TagManager:
   - FinishLine
   - BasicCar
   - Road
+  - Lamp
+  - Enemy
   layers:
   - Default
   - TransparentFX

@@ -12,6 +12,11 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody rb;
     public float rotateSpeed = 100.0f;
 
+    public AudioSource source;
+    public AudioClip lampCollision;
+    public AudioClip[] carCollisionSounds;
+    System.Random rnd = new System.Random();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -60,6 +65,18 @@ public class PlayerMovement : MonoBehaviour
             currentSpeed -= push;
         }
 
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.tag == "Lamp")
+        {
+            source.PlayOneShot(lampCollision);
+        }
+        else if (collision.collider.tag == "Enemy")
+        {
+            source.PlayOneShot(carCollisionSounds[rnd.Next(0, carCollisionSounds.Length)]);
+        }
     }
 
     private void OnTriggerEnter(Collider collider)
