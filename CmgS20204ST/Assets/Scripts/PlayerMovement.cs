@@ -57,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
             rb.angularVelocity = new Vector3(0, 0, 0);
             gameObject.transform.rotation = originalRotation;
             gameObject.transform.position =
-                new Vector3(2f, 2f, pos.z - 20f);
+                new Vector3(2f, 2f, pos.z - (pos.z > 0 ? 20f : 0));
         }
     }
 
