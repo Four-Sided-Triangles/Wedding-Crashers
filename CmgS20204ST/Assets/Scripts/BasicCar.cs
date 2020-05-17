@@ -11,10 +11,13 @@ public class BasicCar : MonoBehaviour
     public bool isHit = false;
     public Vector3 previousPosition;
     const float toleranceForDeletingStoppedObjects = 0.001f;
+    public Color[] colors = { Color.red, Color.blue, Color.green, Color.yellow, Color.magenta, Color.cyan };
+    private Color previousColor = Color.red;
 
     // Start is called before the first frame update
     void Start()
     {
+        setCarColor();
         InvokeRepeating("DestroyIfIdle", 3f, .1f);
         InvokeRepeating("DestroyIfFlying", .01f, .001f);
         rb = GetComponent<Rigidbody>();
@@ -73,6 +76,19 @@ public class BasicCar : MonoBehaviour
             rb.AddForce(-transform.up * forwardSpeed);
         }
             
+    }
+
+    private void setCarColor()
+    {
+        int randomColor = UnityEngine.Random.Range(0, colors.Length);
+        while(colors[randomColor] == previousColor)
+        {
+            randomColor = UnityEngine.Random.Range(0, colors.Length);
+        }
+        previousColor = colors[randomColor];
+        gameObject.GetComponent<Renderer>().material.color = colors[randomColor];
+  
+       
     }
 
     private void OnCollisionEnter(Collision collision)
