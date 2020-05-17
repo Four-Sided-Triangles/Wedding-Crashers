@@ -11,16 +11,28 @@ public class CarSpawner : MonoBehaviour
     public GameObject truck;
 
     public float spawnCoolDown;
+    public bool canExpire;
+    public float expire;
 
     // Start is called before the first frame update
     void Start()
     {
         Random.InitState((int) Time.time);
+        InvokeRepeating("DestroyIfExpired", 1f, 1f);
+    }
+
+    void DestroyIfExpired()
+    {
+        if (canExpire && expire < 0)
+        {
+            Destroy(gameObject);
+        }
+        expire--;
     }
 
     // Update is called once per frame
     void Update()
-    {
+    {     
         if (spawnCoolDown <= 0)
         {
             Invoke("Spawn", 0f);
