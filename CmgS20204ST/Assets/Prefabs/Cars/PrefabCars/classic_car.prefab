@@ -114,6 +114,13 @@ MonoBehaviour:
   maxSpeed: 30
   isHit: 0
   previousPosition: {x: 0, y: 0, z: 0}
+  colors:
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 0, g: 0, b: 1, a: 1}
+  - {r: 0, g: 1, b: 0, a: 1}
+  - {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  - {r: 1, g: 0, b: 1, a: 1}
+  - {r: 0, g: 1, b: 1, a: 1}
 --- !u!54 &-5648533407368479379
 Rigidbody:
   m_ObjectHideFlags: 0

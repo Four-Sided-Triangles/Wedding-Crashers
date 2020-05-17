@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public float push;
     private Rigidbody rb;
     public float rotateSpeed = 100.0f;
+    private Quaternion originalRotation;
 
     public AudioSource source;
     public AudioClip lampCollision;
@@ -21,11 +23,13 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        originalRotation = gameObject.transform.rotation;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        Reorientate();
         setSpeed();
         if (currentSpeed <= maxForwardSpeed && currentSpeed >= maxBackwardSpeed)
         {
@@ -39,6 +43,22 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = rb.velocity.normalized * 50;
         }
         playerMovement();
+    }
+
+    private void Reorientate()
+    {
+        Vector3 pos = gameObject.transform.position;
+        Quaternion rot = gameObject.transform.rotation;
+        if (pos.x > 20f || pos.x < -20f
+            || pos.y > 10f || pos.y < -4f
+            || Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.velocity = new Vector3(0,0,0);
+            rb.angularVelocity = new Vector3(0, 0, 0);
+            gameObject.transform.rotation = originalRotation;
+            gameObject.transform.position =
+                new Vector3(2f, 2f, pos.z - (pos.z > 0 ? 20f : 0));
+        }
     }
 
     private void playerMovement()

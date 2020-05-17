@@ -68,6 +68,9 @@ public class CarSpawner : MonoBehaviour
                 selectedCar = truck;
                 break;
         }
-        Instantiate(selectedCar, gameObject.transform.position, Quaternion.identity);
+        if (gameObject.CompareTag("Front"))
+            Instantiate(selectedCar, gameObject.transform.position, Quaternion.Euler(-90, 0, 0));
+        else if (gameObject.CompareTag("Reverse"))
+            Instantiate(selectedCar, gameObject.transform.position, Quaternion.Euler(-90, 0, 180));
     }
 }

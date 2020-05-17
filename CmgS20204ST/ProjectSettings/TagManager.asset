@@ -11,6 +11,8 @@ TagManager:
   - Road
   - Lamp
   - Enemy
+  - Front
+  - Reverse
   layers:
   - Default
   - TransparentFX
