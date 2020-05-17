@@ -43,5 +43,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 432e5886185a73f4791bed9ec233e27b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basicCar: {fileID: 3515212112200877672, guid: 775eee9721cb1f746ad81c68b24d5ff7,
+  classicCar: {fileID: 415822386021554619, guid: 7bb25f5bfd1133545aa91cd55d7e2c86,
     type: 3}
+  familyCar: {fileID: 3515212112200877672, guid: 775eee9721cb1f746ad81c68b24d5ff7,
+    type: 3}
+  iceCreamTruck: {fileID: 4450297302187490037, guid: 28f66933a1dda66439d9bddfa3b09392,
+    type: 3}
+  sportsCar: {fileID: 6145943445623741017, guid: 7098c76d72cec464fa57ebb571cfc1a0,
+    type: 3}
+  truck: {fileID: 6272973233905505858, guid: 58318b467e81f534bb8aa773d2f60342, type: 3}
+  spawnCoolDown: 0
