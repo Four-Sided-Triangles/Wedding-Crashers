@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4166505853620869693}
   m_Layer: 0
   m_Name: fense
-  m_TagString: Untagged
+  m_TagString: Lamp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
