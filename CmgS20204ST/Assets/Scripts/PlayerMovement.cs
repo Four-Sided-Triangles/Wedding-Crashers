@@ -51,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
         Quaternion rot = gameObject.transform.rotation;
         if (pos.x > 20f || pos.x < -20f
             || pos.y > 10f || pos.y < -4f
-            || Input.GetKey(KeyCode.Space))
+            || Input.GetKeyDown(KeyCode.Space))
         {
             rb.velocity = new Vector3(0,0,0);
             rb.angularVelocity = new Vector3(0, 0, 0);
