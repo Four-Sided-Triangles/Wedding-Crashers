@@ -37,7 +37,8 @@ public class BasicCar : MonoBehaviour
     private void DestroyIfFlying()
     {
         if (gameObject.transform.position.x > 30f || gameObject.transform.position.x < -30f
-            || gameObject.transform.position.y > 30f || gameObject.transform.position.y < -4f)
+            || gameObject.transform.position.y > 30f || gameObject.transform.position.y < -4f
+            || gameObject.transform.position.z > 1800f || gameObject.transform.position.z < -40f)
         {
             Destroy(gameObject);
         }
