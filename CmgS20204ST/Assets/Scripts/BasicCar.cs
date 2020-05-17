@@ -16,6 +16,7 @@ public class BasicCar : MonoBehaviour
     void Start()
     {
         InvokeRepeating("DestroyIfIdle", 3f, .1f);
+        InvokeRepeating("DestroyIfFlying", .01f, .001f);
         rb = GetComponent<Rigidbody>();
     }
 
@@ -31,6 +32,15 @@ public class BasicCar : MonoBehaviour
         }
 
         previousPosition = gameObject.transform.position;
+    }
+
+    private void DestroyIfFlying()
+    {
+        if (gameObject.transform.position.x > 30f || gameObject.transform.position.x < -30f
+            || gameObject.transform.position.y > 30f || gameObject.transform.position.y < -4f)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void Update()
