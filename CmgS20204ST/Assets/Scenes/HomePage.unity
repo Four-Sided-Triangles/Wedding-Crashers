@@ -1833,7 +1833,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 264008a866b17cd45b42cde0a5bc7741, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 9762e6b00ebcd8d499cca19cb7bda2ed, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -2659,14 +2659,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Accelerate ... Click W
+  m_text: 'Vroom Vroom                            W
 
-    Decelerate / Stop ... Hold S
+    Slow Down n''  Reverse             
+    S
 
-    Reverse
-    ... Click S + Hold Y
-
-    Turn ... A or D'
+    Turn                                      A and D'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0b7d0af5b9c44be4798ffe23358b92a7, type: 2}
   m_sharedMaterial: {fileID: -2261175661034052614, guid: 0b7d0af5b9c44be4798ffe23358b92a7,
