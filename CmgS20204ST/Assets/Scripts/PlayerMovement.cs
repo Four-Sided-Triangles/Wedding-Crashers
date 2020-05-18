@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
         setSpeed();
         if (currentSpeed <= maxForwardSpeed && currentSpeed >= maxBackwardSpeed)
         {
-            rb.AddForce(transform.forward * currentSpeed * 1500);
+            rb.AddForce(transform.forward * currentSpeed * 1300);
             //rb.MovePosition(transform.position + transform.forward * Time.fixedDeltaTime * currentSpeed);
         }
 
@@ -51,8 +51,8 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 pos = gameObject.transform.position;
         Quaternion rot = gameObject.transform.rotation;
-        if (pos.x > 20f || pos.x < -20f
-            || pos.y > 10f || pos.y < -4f
+        if (pos.x > 40f || pos.x < -40f
+            || pos.y > 30f || pos.y < -10f
             || Input.GetKeyDown(KeyCode.Space))
         {
             rb.velocity = new Vector3(0,0,0);
