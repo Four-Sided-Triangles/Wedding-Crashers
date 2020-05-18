@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
         setSpeed();
         if (currentSpeed <= maxForwardSpeed && currentSpeed >= maxBackwardSpeed)
         {
-            rb.AddForce(transform.forward * currentSpeed * 1000);
+            rb.AddForce(transform.forward * currentSpeed * 1500);
             //rb.MovePosition(transform.position + transform.forward * Time.fixedDeltaTime * currentSpeed);
         }
 
@@ -105,9 +105,15 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collider.tag == "FinishLine")
         {
-            UnityEngine.Debug.Log("Finish!");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            Destroy(collider.gameObject);
+            Invoke("endGame", 0.6f);
         }
+    }
+
+    public void endGame()
+    {
+        UnityEngine.Debug.Log("Finish!");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
 

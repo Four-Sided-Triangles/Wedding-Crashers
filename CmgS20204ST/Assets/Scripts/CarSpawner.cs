@@ -36,7 +36,7 @@ public class CarSpawner : MonoBehaviour
         if (spawnCoolDown <= 0)
         {
             Invoke("Spawn", 0f);
-            spawnCoolDown = Random.Range(180f, 500f);
+            spawnCoolDown = Random.Range(200f, 300f);
         }
         else
         {
