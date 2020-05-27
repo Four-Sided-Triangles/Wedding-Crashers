@@ -1,2 +1,4 @@
 *.shader linguist-detectable=false
 *.csharp linguist-detectable=true
+
+*.shader linguistic-language=C#
