@@ -1,3 +1,4 @@
 *.csharp linguistic-detectable=true
 *.shader linguistic-detectable=false
 *.mat linguistic-detectable=false
+*.shaderlab linguistic-detectable=false
