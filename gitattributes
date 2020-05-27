@@ -1,2 +1,2 @@
 *.shader linguist-detectable=false
-*.cs linguist-detectable=true
+*.csharp linguist-detectable=true
