@@ -1,2 +1,1 @@
-*.csharp linguist-detectable=true
-*.shader linguist-detectable=false
+*.* linguist-language=Csharp
