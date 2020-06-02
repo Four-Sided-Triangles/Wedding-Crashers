@@ -1,2 +1,1 @@
-* linguistic-vendored
-*.shader linguistic-vendored=false
+*.shader linguist-language=false
